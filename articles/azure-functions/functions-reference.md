@@ -19,14 +19,13 @@
 	ms.author="chrande"/>
 
 # Referência do desenvolvedor do Azure Functions
-
-As funções do Azure Functions compartilham alguns conceitos técnicos e componentes principais, independentemente do linguagem ou da associação usada. Antes de ir para o aprendizado de detalhes específicos de um determinado linguagem ou associação, leia esta visão geral que se aplica a todos eles.
+Azure Functions compartilham alguns componentes e conceitos técnicos principais, independentemente da linguagem ou binding que você utilizar. Antes de saltar para o aprendizado específico a uma linguagem ou binding, assegure-se de ler esta visão geral que se aplica a todos eles.
 
 Este artigo pressupõe que você já tenha lido a [Visão geral do Azure Functions](functions-overview.md) e está familiarizado com [conceitos do SDK de WebJobs como gatilhos, associações e tempo de execução do JobHost](../app-service-web/websites-dotnet-webjobs-sdk.md). O Azure Functions é baseado no SDK de WebJobs.
 
 ## função
 
-Uma *Função* é o principal conceito no Azure Functions. Grave um código para uma função em uma linguagem de sua escolha e salve os arquivos de código e um arquivo de configuração na mesma pasta. A configuração é em JSON e o arquivo é denominado `function.json`. Há suporte a várias linguagens e cada uma tem uma experiência ligeiramente diferente otimizada para funcionar melhor nessa linguagem. Exemplo de estrutura de pasta:
+Uma *função* é o principal conceito no Azure Functions. Você escreve o código para uma função em uma linguagem de sua escolha e salva os arquivos de código e um arquivo de configuração na mesma pasta. A configuração é em JSON, e o arquivo é nomeado `function.json`. Há suporte para várias linguagens, e cada uma tem uma experiência ligeiramente diferente, otimizada para funcionar melhor para esta linguagem. Exemplo de estrutura de pasta:
 
 ```
 mynodefunction
@@ -40,9 +39,9 @@ mycsharpfunction
 | - run.csx
 ```
 
-## function.JSON e associações
+## function.JSON e bindings
 
-O arquivo `function.json` contém uma configuração específica para uma função, incluindo suas associações. O tempo de execução lê esse arquivo para determinar quais eventos disparar, quais dados serão incluídos no chamamento da função e para onde enviar os dados passados pela própria função.
+O arquivo `function.json` contém uma configuração específica para uma função, incluindo seu binding. Em tempo de execução esse arquivo é lido para determinar quais eventos disparar, quais dados serão incluídos na chamada da função e para onde enviar os dados passados pela própria função.
 
 ```json
 {
@@ -61,17 +60,17 @@ O arquivo `function.json` contém uma configuração específica para uma funç�
 
 Você pode impedir que o tempo de execução execute a função definindo a propriedade `disabled` como `true`.
 
-A propriedade `bindings` é onde você configura gatilhos e associações. Cada associação compartilha algumas configurações comuns e outras que são específicas para um determinado tipo de associação. Todas as associações exigem as seguintes configurações:
+A propriedade `bindings` é onde você configura gatilhos e associações. Cada binding compartilha algumas configurações comuns e outras que são específicas para um determinado tipo de binding. Todas as associações exigem as seguintes configurações:
 
 |Propriedade|Valores/Tipos|Comentários|
 |---|-----|------|
-|`type`|string|Tipo de associação. Por exemplo: `queueTrigger`.
+|`type`|string|Tipo de binding. Por exemplo: `queueTrigger`.
 |`direction`|'in', 'out'| Indica se a associação é para receber dados na função ou enviar dados a partir da função.
 | `name` | string | O nome que será usado para os dados associados na função. Em C#, ele será o nome de um argumento. Em JavaScript, será a chave em uma lista de chave/valor.
 
 ## Tempo de execução (host de script e host Web)
 
-O tempo de execução, também conhecido como o host de script, é o host do SDK de WebJobs subjacente que escuta eventos, coleta e envia dados e, no fim das contas, executa seu código.
+O tempo de execução, também conhecido como o host de script, é o host por baixo do SDK de WebJobs que escuta eventos, coleta e envia dados e, no fim das contas, executa seu código.
 
 Para facilitar gatilhos HTTP, há também um host Web que foi desenvolvido para ficar na frente do host de script em cenários de produção. Isso ajuda a isolar o host de script a partir do tráfego de front-end gerenciado pelo host Web.
 
