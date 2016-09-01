@@ -18,7 +18,7 @@
 
 #O que são aplicativos lógicos?
 
-Os Aplicativos Lógicos fornecem uma maneira de simplificar e implementar integrações escalonáveis e fluxos de trabalho na nuvem. Fornece um designer visual para modelar e automatizar o processo como uma série de etapas conhecidas como um fluxo de trabalho. Há [muitos conectores](../connectors/apis-list.md) locais e na nuvem para integrar rapidamente entre serviços e protocolos. Um aplicativo lógico começa com um disparador (como 'Quando uma conta é adicionada ao Dynamics CRM') e, após ser disparado, pode iniciar muitas ações de combinações, conversões e lógica de condição.
+Os Aplicativos Lógicos fornecem uma maneira de simplificar e implementar integrações escalonáveis e fluxos de trabalho na nuvem. Ele fornece um designer visual para modelar e automatizar o seu processo em uma série de etapas conhecidas como um fluxo de trabalho. Há [muitos conectores](../connectors/apis-list.md) locais e na nuvem para integrar rapidamente entre serviços e protocolos. Um aplicativo lógico começa com um gatilho (como 'Quando uma conta é adicionada ao Dynamics CRM') e, após ser disparado, pode iniciar muitas ações de combinações, conversões e lógica condicional.
 
 As vantagens de usar Aplicativos Lógicos incluem o seguinte:
 
@@ -26,10 +26,10 @@ As vantagens de usar Aplicativos Lógicos incluem o seguinte:
 - Implementação de padrões e fluxos de trabalho perfeitamente, que seriam difíceis de implementar no código
 - Introdução rápida por meio de modelos
 - Personalização de seu aplicativo lógico com suas próprias APIs, código e ações personalizadas
-- Conectar-se e sincronizar sistemas distintos no local e na nuvem
+- Conectar e sincronizar sistemas distintos no local e na nuvem
 - Criado com base no BizTalk server, Gerenciamento de API, Azure Functions e Barramento de Serviço do Azure com suporte à integração de primeira classe
 
-Os Aplicativos Lógicos são uma iPaaS (Plataforma de integração como um Serviço) totalmente gerenciada que permite que os desenvolvedores não precisem se preocupar em criar hospedagem, escalabilidade, disponibilidade e gerenciamento. Os Aplicativos Lógicos serão escalados verticalmente de forma automática para atender à demanda.
+Os Aplicativos Lógicos são uma iPaaS (Plataforma de integração como um Serviço) totalmente gerenciada que permite que os desenvolvedores não precisem se preocupar com hospedagem, escalabilidade, disponibilidade e gerenciamento. Os Aplicativos Lógicos serão escalados verticalmente de forma automática para atender à demanda.
 
 ![Designer de aplicativo de fluxo](./media/app-service-logic-what-are-logic-apps/LogicAppCapture2.png)
 
@@ -39,11 +39,11 @@ Conforme mencionado, com Aplicativos Lógicos, você pode automatizar processos 
 * Processar e rotear solicitações entre sistemas locais e na nuvem
 * Monitorar todos os tweets sobre determinado tópico, analisar o sentimento e criar alertas e tarefas para itens que precisam de acompanhamento.
 
-Cenários como esses podem ser configurados inteiramente por meio do designer visual e sem escrever uma única linha de código sequer. Introdução [criação de seu aplicativo lógico agora][create]. Uma vez gravado, um aplicativo lógico pode ser [rapidamente implantado e reconfigurado](app-service-logic-create-deploy-template.md) em vários ambientes e regiões.
+Cenários como esses podem ser configurados inteiramente por meio do designer visual e sem escrever uma única linha de código sequer. Inicie [criação de seu aplicativo lógico agora][create]. Uma vez gravado, um aplicativo lógico pode ser [rapidamente implantado e reconfigurado](app-service-logic-create-deploy-template.md) em vários ambientes e regiões.
 
 ## Por que aplicativos lógicos?
 
-Os Aplicativos Lógicos proporcionam velocidade e escalabilidade ao espaço de integração empresarial. A facilidade de uso do designer, a variedade de disparadores e ações disponíveis e as ferramentas de gerenciamento poderosas simplificam mais do que nunca a centralização das APIs. À medida que as empresas adotam a digitalização, os Aplicativos Lógicos permitem a conexão entre sistemas herdados e inovadores.
+Os Aplicativos Lógicos proporcionam velocidade e escalabilidade ao espaço de integração empresarial. A facilidade de uso do designer, a variedade de disparadores e ações disponíveis e as ferramentas de gerenciamento poderosas simplificam mais do que nunca a centralização das APIs. À medida que as empresas adotam a digitalização, os Aplicativos Lógicos permitem a conexão entre sistemas legados e inovadores.
 
 Além disso, com a [conta do Enterprise Integration][biztalk], você pode dimensionar para cenários de integração desenvolvidos com a capacidade de [mensagens XML][xml], [gerenciamento de parceiros comerciais][tpm] e muito mais.
 
